@@ -9,6 +9,6 @@ const {PGHOST, PGDATABASE, PGUSER, PGPASSWORD} = process.env
 
 
 export const sql = neon(
-    `postgressql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}`
+    `postgresql://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?sslmode=require`
 
 )
