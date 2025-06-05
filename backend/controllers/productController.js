@@ -1,7 +1,7 @@
 import { sql } from "../config/db.js"
 export const getProducts =async (req, res)=>{
     try {
-        const products = await `
+        const products = await sql`
             SELECT * from products
             ORDER BY created_at DESC
         `;
